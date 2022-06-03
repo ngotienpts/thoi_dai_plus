@@ -1,0 +1,39 @@
+@media (max-width: 64em) {
+  .d-none {
+    display: none;
+  }
+
+  .d-block {
+    display: block;
+  }
+
+  .navbar-header__time,
+.ads-header,
+.navigation-bar-wrapper {
+    display: none;
+  }
+
+  .navbar-header__search--mb {
+    display: block;
+  }
+
+  .nav-header {
+    justify-content: normal;
+  }
+
+  .nav-header__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .nav-header-wrapper {
+    border-bottom: none;
+  }
+
+  /*============================================================================     cate*/
+}
+
+/*# sourceMappingURL=responsive.css.map */
