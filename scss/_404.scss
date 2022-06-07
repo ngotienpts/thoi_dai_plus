@@ -1,0 +1,33 @@
+.err-primary-img {
+    margin: auto;
+}
+.err-primary-title {
+    text-align: center;
+    color: #d52627;
+    padding: 20px;
+    line-height: 1.5;
+    font-size: 22px;
+    font-weight: 500;
+}
+.err-secondary-title {
+    padding-bottom: 1.5rem;
+}
+.err-secondary-title a{
+    text-decoration: underline;
+}
+.err-secondary ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+.err-secondary ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-left: 20px;
+}
+.err-secondary ul li::before {
+    position: absolute;
+    content: '\2022';
+    left: 0;
+}

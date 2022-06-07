@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // width document
   var widthDoc = document.querySelector("body");
 
+  // show search pc
+  var searchPc = document.querySelector('.navigation-bar-search')
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -49,6 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
           subMenu.classList.remove("active");
         };
       }
+
+      // show search pc
+      if(searchPc){
+        searchPc.onclick = function(){
+          searchPc.parentElement.parentElement.querySelector('.navigation-bar-form').classList.toggle('active')
+        }
+      }
+
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },

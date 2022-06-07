@@ -1,0 +1,26 @@
+.search-result {
+    width: 100%;
+    padding-bottom: 30px;
+}
+.form-group {
+    display: flex;
+    border: 1px solid #265a44;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.form-search-result {
+    flex: 1;
+}
+.btn-search-result {
+    flex-shrink: 0;
+    background-color: #265a44;
+    border-radius: 0 6px 6px 0;
+    padding: 10px 40px;
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    -ms-border-radius: 0 6px 6px 0;
+    -o-border-radius: 0 6px 6px 0;
+}
+.form-search-result {
+    padding: 12px;
+}
