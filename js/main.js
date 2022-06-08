@@ -63,51 +63,27 @@ document.addEventListener("DOMContentLoaded", function () {
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },
-    // slide navbar mb
-    slideNavbarMb: function () {
-      $(".navigation-bar-list--mb").slick({
-        infinite: false,
-        dots: false,
-        arrows: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        variableWidth:true,
-      });
-    },
-    // slide idea
-    slideIdea: function () {
-      $(".idea-content").slick({
-        infinite: true,
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-      });
-    },
-    // slide index
-    slideIndex:function(){
-      $(".tabs")
+    // slide picture
+    slidePicture:function(){
+      $(".picture-img-filed")
         .not(".slick-initialized")
         .slick({
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
-          asNavFor: '.tab-content',
-          focusOnSelect: true,
-          infinite: false,
+          fade: true,
+          asNavFor: '.picture-thumb-list',
+          // autoplay:true,
+          speed:300,
+          lazyLoad:'ondemand'
         });
-      $(".tab-content").not(".slick-initialized").slick({
-        slidesToShow: 1,
+      $(".picture-thumb-list").not(".slick-initialized").slick({
+        slidesToShow: 4,
         slidesToScroll: 1,
-        asNavFor: '.tabs',
-        infinite: false,
-        dots: false,
-        fade: true,
-        arrows: false,
+        asNavFor: '.picture-img-filed',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
       });
     },
     // scroll top
@@ -139,12 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.handleEvent();
       // window scroll
       this.windowScroll();
-      // slide navbar mb
-      this.slideNavbarMb();
-      // slide idea
-      this.slideIdea();
-      // slide index
-      this.slideIndex();
+      // slide picture
+      this.slidePicture();
     },
   };
 
