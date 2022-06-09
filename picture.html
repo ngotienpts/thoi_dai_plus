@@ -102,6 +102,129 @@
       </div>
     </section>
     <!-- end sub menu mb -->
+
+    <!-- popup full screen picture -->
+    <div class="full-screen-picture-wrapper">
+      <!-- close -->
+      <div class="close-full-screen"><i class="fas fa-times text-white"></i></div>
+      <!-- end close -->
+      <div class="full-screen-picture-block">
+        <div class="full-screen-picture text-white">
+          <!-- large -->
+          <div class="full-picture-large">
+            <!-- item -->
+            <div class="full-picture-large-item">
+              <!-- img -->
+              <img src="./images/1.jpg" alt="" class="full-picture-large-img">
+              <!-- end img -->
+              <!-- text -->
+              <p class="full-picture-large-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati necessitatibus impedit quasi dolorem possimus aspernatur natus ipsa est ab dolores eos temporibus animi error, fugiat fuga modi! Molestias, rerum. A.</p>
+              <!-- end text -->
+            </div>
+            <!-- end item -->
+            <!-- item -->
+            <div class="full-picture-large-item">
+              <!-- img -->
+              <img src="./images/2.jpg" alt="" class="full-picture-large-img">
+              <!-- end img -->
+              <!-- text -->
+              <p class="full-picture-large-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati necessitatibus impedit quasi dolorem.</p>
+              <!-- end text -->
+            </div>
+            <!-- end item -->
+            <!-- item -->
+            <div class="full-picture-large-item">
+              <!-- img -->
+              <img src="./images/3.jpg" alt="" class="full-picture-large-img">
+              <!-- end img -->
+              <!-- text -->
+              <p class="full-picture-large-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati necessitatibus impedit quasi dolorem possimus aspernatur natus ipsa est ab dolores eos temporibus animi error, fugiat fuga modi! Molestias, rerum. A.</p>
+              <!-- end text -->
+            </div>
+            <!-- end item -->
+            <!-- item -->
+            <div class="full-picture-large-item">
+              <!-- img -->
+              <img src="./images/4.jpg" alt="" class="full-picture-large-img">
+              <!-- end img -->
+              <!-- text -->
+              <p class="full-picture-large-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati necessitatibus impedit quasi dolorem .</p>
+              <!-- end text -->
+            </div>
+            <!-- end item -->
+            <!-- item -->
+            <div class="full-picture-large-item">
+              <!-- img -->
+              <img src="./images/1.jpg" alt="" class="full-picture-large-img">
+              <!-- end img -->
+              <!-- text -->
+              <p class="full-picture-large-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati necessitatibus impedit quasi dolorem possimus aspernatur natus ipsa est ab dolores eos temporibus animi error, fugiat fuga modi! Molestias, rerum. A.</p>
+              <!-- end text -->
+            </div>
+            <!-- end item -->
+            <!-- item -->
+            <div class="full-picture-large-item">
+              <!-- img -->
+              <img src="./images/2.jpg" alt="" class="full-picture-large-img">
+              <!-- end img -->
+              <!-- text -->
+              <p class="full-picture-large-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati necessitatibus impedit quasi dolorem</p>
+              <!-- end text -->
+            </div>
+            <!-- end item -->
+          </div>
+          <!-- end large -->
+          <!-- small -->
+          <div class="full-picture-small">
+            <div class="full-picture-small-item">
+              <div class="thumb-img">
+                  <div class="thumb-item thumb-5x3">
+                      <img class="" src="./images/1.jpg" alt="">
+                  </div>
+              </div>
+            </div>
+            <div class="full-picture-small-item">
+              <div class="thumb-img">
+                  <div class="thumb-item thumb-5x3">
+                      <img class="" src="./images/2.jpg" alt="">
+                  </div>
+              </div>
+            </div>
+            <div class="full-picture-small-item">
+              <div class="thumb-img">
+                  <div class="thumb-item thumb-5x3">
+                      <img class="" src="./images/3.jpg" alt="">
+                  </div>
+              </div>
+            </div>
+            <div class="full-picture-small-item">
+              <div class="thumb-img">
+                  <div class="thumb-item thumb-5x3">
+                      <img class="" src="./images/4.jpg" alt="">
+                  </div>
+              </div>
+            </div>
+            <div class="full-picture-small-item">
+              <div class="thumb-img">
+                  <div class="thumb-item thumb-5x3">
+                      <img class="" src="./images/1.jpg" alt="">
+                  </div>
+              </div>
+            </div>
+            <div class="full-picture-small-item">
+              <div class="thumb-img">
+                  <div class="thumb-item thumb-5x3">
+                      <img class="" src="./images/2.jpg" alt="">
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- end small -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup full screen picture -->
     <!-- header -->
     <header id="header">
       <!-- navigation bar-->
@@ -227,7 +350,7 @@
                         <h1 class="fs-28 fw-700 picture-title pb-10 lh-46 text-white">
                             Vingroup plans U.S. IPO for automaking arm in late 2022
                         </h1>
-                        <button class="expand-picture btn"><i class="fas fa-expand-alt"></i></button>
+                        <button class="expand-picture btn show-modal-album"><i class="fas fa-expand-alt"></i></button>
                     </div>
                     <!-- public and share -->
                     <div class="public-share font-secondary">
@@ -277,9 +400,13 @@
                             <!-- autoplay -->
                             <div class="autoplay-album picture-func-left-item"><i class="fas fa-play pr-10"></i> Tự động</div>
                             <!-- end autoplay -->
+                            <div class="paused-album picture-func-left-item"><i class="fas fa-pause pr-10"></i> Dừng</div>
+                            <!-- paused-->
+
+                            <!-- end paused-->
                         </div>
                         <!-- pagination -->
-                        <ul class="pagination-picture">
+                        <!-- <ul class="pagination-picture">
                             <li class="pagination-item">&#10094;</li>
                             <li class="pagination-item">1</li>
                             <li class="pagination-item">2</li>
@@ -288,7 +415,7 @@
                             <li class="pagination-item">5</li>
                             <li class="pagination-item">6</li>
                             <li class="pagination-item">&#10095;</li>
-                        </ul>
+                        </ul> -->
                         <!-- end pagination -->
                     </div>
                     <!-- end chức năng -->

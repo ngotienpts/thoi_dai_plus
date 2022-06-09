@@ -10,7 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
   var widthDoc = document.querySelector("body");
 
   // show search pc
-  var searchPc = document.querySelector('.navigation-bar-search')
+  var searchPc = document.querySelector('.navigation-bar-search');
+
+  // play & pause slide picture
+  var playAlbum = document.querySelector('.autoplay-album');
+  var pausedAlbum = document.querySelector('.paused-album');
+
+  // show popup picture
+  var popupPicture = document.querySelector('.full-screen-picture-wrapper');
+  var showPopupPicture = document.querySelectorAll('.show-modal-album');
+  var closePopupPicture = document.querySelector('.close-full-screen');
 
   const app = {
     // su ly cac su kien
@@ -60,6 +69,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
+      // hide button play & paused picture
+      if(playAlbum || pausedAlbum){
+        playAlbum.onclick = function(){
+          pausedAlbum.style.display = 'block';
+          playAlbum.style.display = 'none';
+        }
+        pausedAlbum.onclick = function(){
+          playAlbum.style.display = 'block';
+          pausedAlbum.style.display = 'none';
+        }
+      }
+
+      // show & close popup
+      if(showPopupPicture){
+        showPopupPicture.forEach(function(index){
+          index.onclick = function(){
+            // slide popup picture
+            popupPicture.classList.add('open');
+            _this.slidePopupPicture();
+
+          }
+        })
+      }
+      if(closePopupPicture){
+        closePopupPicture.onclick = function(){
+          popupPicture.classList.remove('open');
+        }
+      }
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },
@@ -73,9 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
           arrows: false,
           fade: true,
           asNavFor: '.picture-thumb-list',
-          // autoplay:true,
-          speed:300,
-          lazyLoad:'ondemand'
+          autoplaySpeed:1000,
+          adaptiveHeight:true,
+          lazyLoad:'ondemand',
+          
         });
       $(".picture-thumb-list").not(".slick-initialized").slick({
         slidesToShow: 4,
@@ -84,6 +122,87 @@ document.addEventListener("DOMContentLoaded", function () {
         dots: true,
         centerMode: true,
         focusOnSelect: true,
+        customPaging : function(slider, i) {
+          var thumb = $(slider.$slides[i]).data();
+          return '<a class="pagination-item">'+(i+1)+'</a>';
+        },
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+      $('.autoplay-album').on('click', function() {
+          $('.picture-img-filed').slick('slickPlay');
+      });
+      $('.paused-album').on('click', function() {
+          $('.picture-img-filed').slick('slickPause');
+      });
+    },
+
+    // slide popup picture
+    slidePopupPicture:function(){
+      $(".full-picture-large")
+        .not(".slick-initialized")
+        .slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.full-picture-small',
+          autoplaySpeed:1000,
+          adaptiveHeight:true,
+          lazyLoad:'ondemand',
+          
+        });
+      $(".full-picture-small").not(".slick-initialized").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.full-picture-large',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+        ]
       });
     },
     // scroll top
@@ -117,6 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.windowScroll();
       // slide picture
       this.slidePicture();
+      
     },
   };
 
