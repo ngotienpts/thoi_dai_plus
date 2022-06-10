@@ -97,6 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
           popupPicture.classList.remove('open');
         }
       }
+      if(widthDoc){
+        var expNoEditFull = document.querySelectorAll('.expNoEdit.full');
+        expNoEditFull.forEach(function(a){
+          a.style.width = widthDoc.clientWidth + 'px';
+          a.style.marginLeft = '-' + a.offsetLeft + 'px';
+        })
+      }
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },

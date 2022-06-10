@@ -375,7 +375,15 @@
 .full-picture-small .slick-prev:before, .full-picture-small .slick-next:before {
   font-size: 26px;
 }
-
+// ==================================================================================emagazine
+.ema-container figure.expNoEdit.right {
+  margin-left: 0 !important;
+  max-width: 100%;
+}
+.ema-container .public, .ema-container p, .ema-container h1, .ema-container h2, .ema-container h3, .ema-container h4, .ema-container h5, .ema-container h6 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
 
 }
 
